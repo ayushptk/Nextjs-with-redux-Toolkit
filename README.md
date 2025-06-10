@@ -1,4 +1,4 @@
-# Nextjs with reduxtoolkit
+# Nextjs with Redux Toolkit
 
 ## Notes
 - Redux toolkit is a library that helps you to use Redux in a more efficient way.
