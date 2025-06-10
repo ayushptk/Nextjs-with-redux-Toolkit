@@ -1,3 +1,4 @@
 # Nextjs with reduxtoolkit
 
-![Installation](public/image.png)
+![Installation](public/installation.png)
+![Installation](public/reduxtoolkit.png)
