@@ -6,8 +6,8 @@ export default function AddUsers() {
     const [name,setName] = useState('')
     const dispatch = useDispatch()
     const userDispatch = ()=>{
-        
-        dispatch(addUser({name}))  
+
+        dispatch(addUser(name))  
       
 
     }
