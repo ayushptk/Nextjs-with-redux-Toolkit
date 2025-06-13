@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { removeUser } from "../redux/slice";
 export default function DisplayUsers() {
     const userData = useSelector((data)=>
-         data.users);
+         data.usersData.users);
     const dispatch = useDispatch();
    console.log( "data are"+JSON.stringify(userData));
     return (

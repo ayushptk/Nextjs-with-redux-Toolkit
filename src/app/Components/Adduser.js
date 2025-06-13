@@ -21,6 +21,7 @@ export default function AddUsers() {
         <input type="text" name="name" placeholder="Add new users" onChange={(e)=>setName(e.target.value)} />
 <button onClick={userDispatch}>Add Users</button>
 <Link href={"/removeuser"}>Remove user</Link>
+<Link href={"/todolist"}>Todo List</Link>
         </div>
     );
 }
