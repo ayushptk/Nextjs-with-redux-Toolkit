@@ -1,8 +1,9 @@
 // counterSlice.js
-const { createSlice,nanoid } = require('@reduxjs/toolkit');
+const { createSlice,nanoid,current } = require('@reduxjs/toolkit');
 
 const initialState={
-    users:[]
+    users:JSON.parse(localStorage.getItem("Users")) || [],
+
     
 }
 
@@ -18,6 +19,10 @@ const Slice = createSlice({
                 name:action.payload
             }
             state.users.push(data)
+            console.log(current(state.users));
+            //it will show the current state
+              let UserData = JSON.stringify(current(state.users));
+            localStorage.setItem("Users",UserData)
         },
         removeUser:(state,action)=>{
            
