@@ -6,7 +6,7 @@ export default function DisplayUsers() {
     const userData = useSelector((data)=>
          data.users);
     const dispatch = useDispatch();
-    console.log("userData is"+userData);
+   console.log( "data are"+JSON.stringify(userData));
     return (
         <div className="displayuser">
             <h1>User List</h1>

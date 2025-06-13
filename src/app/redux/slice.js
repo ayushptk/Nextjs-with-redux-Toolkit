@@ -3,7 +3,9 @@ const { createSlice,nanoid } = require('@reduxjs/toolkit');
 
 const initialState={
     users:[]
+    
 }
+
 
 const Slice = createSlice({
     name:'User Push',
@@ -18,7 +20,10 @@ const Slice = createSlice({
             state.users.push(data)
         },
         removeUser:(state,action)=>{
+           
             state.users = state.users.filter((item)=>item.id!==action.payload)
+            //  console.log(item.id);
+            console.log(action.payload);
         }
     }
 
