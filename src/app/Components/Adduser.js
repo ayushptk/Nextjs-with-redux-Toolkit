@@ -22,6 +22,7 @@ export default function AddUsers() {
 <button onClick={userDispatch}>Add Users</button>
 <Link href={"/removeuser"}>Remove user</Link>
 <Link href={"/todolist"}>Todo List</Link>
+<Link href="/apiusers">Go to Api User</Link>
         </div>
     );
 }

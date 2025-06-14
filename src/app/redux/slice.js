@@ -1,11 +1,20 @@
 // counterSlice.js
-const { createSlice,nanoid,current } = require('@reduxjs/toolkit');
+const { createSlice,nanoid,current, createAsyncThunk } = require('@reduxjs/toolkit');
 
 const initialState={
+    userApiData:[],
     users:JSON.parse(localStorage.getItem("Users")) || [],
 
     
 }
+
+export const fetchApiuser = createAsyncThunk("fetchApiuser",async()=>{
+    console.log("fetchApiuser are here");
+    const response = await fetch('https://jsonplaceholder.typicode.com/users');
+    return response.json();
+
+})
+
 
 
 const Slice = createSlice({
@@ -30,7 +39,13 @@ const Slice = createSlice({
             //  console.log(item.id);
             console.log(action.payload);
         }
-    }
+    },
+    extraReducers:(builder)=>{
+     
+        builder.addCase(fetchApiuser.fulfilled,(state,action)=>{
+               console.log(action);
+        state.userApiData = action.payload;
+    })}
 
 })
 
