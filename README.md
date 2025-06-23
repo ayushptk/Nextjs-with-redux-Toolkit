@@ -16,3 +16,7 @@
 ## Slice
 - A slice is a small piece of state that you want to manage.
 - It is collection of redux reducer logic and actions for single feature in your app.
+![Installation](public/Store.png)
+![Installation](public/Slicer.png)
+
+
